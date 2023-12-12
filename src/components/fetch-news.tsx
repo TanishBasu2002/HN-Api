@@ -42,7 +42,8 @@ export default function FetchNews() {
       console.log(query);
     }
   };
-
+  //@ts-ignore
+  const hnsrc = largeTitle?.url;
   return (
     <>
       <main>
@@ -85,9 +86,8 @@ export default function FetchNews() {
                 {/* @ts-ignore*/}
                 {largeTitle?.title}
               </h1>
-              {/* @ts-ignore*/}
               <a
-                href={largeTitle?.url}
+                href={hnsrc}
                 target="_blank"
                 rel="noreferrer"
                 className="border-b border-gray-700 text-gray-600 text-lg hover:text-gray-900 hover:border-gray-900"
